@@ -6,5 +6,5 @@ bash build.sh /lesson3
 
 ### Исполнить код
 ```c++
-./main 
+./main.o
 ```

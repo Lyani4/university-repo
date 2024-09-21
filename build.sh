@@ -2,5 +2,5 @@
 
 path=$1
 echo "start build"
-clang++ -o ".${path}/main" ".${path}/main.cpp"
+clang++ -o "main.o" ".${path}/main.cpp"
 echo "finish build"
