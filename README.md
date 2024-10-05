@@ -8,3 +8,8 @@ bash build.sh {path_to_lab}
 ```c++
 ./main.o
 ```
+
+### Название проектов
+p1-l2 = practicum1-lab2 
+
+Практика 1 Лабараторная работа 2
