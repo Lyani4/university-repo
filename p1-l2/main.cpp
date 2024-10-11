@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 /*
 Нужно вычислить уравнение (e^sin(x) + ln(arctg (x))) / sin(x)
@@ -15,6 +15,6 @@ int main() {
   expression1 = exp(sin(x));
   expression2 = log(atan(x));
   expression3 = sin(x);
-  std::cout << (expression1 + expression2)/expression3 << std::endl;
+  std::cout << (expression1 + expression2) / expression3 << std::endl;
   return 0;
 }
