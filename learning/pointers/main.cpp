@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <iostream>
 
 int main() {
   std::printf("Пример работы с указателем\n");
@@ -28,6 +27,7 @@ int main() {
 
   int x = 10;
   std::printf("Объем памяти x: %zu байт\n", sizeof(x));
+  std::printf("Адресс памяти где хранится х %p\n", &x);
 
   long long y = x;
   std::printf("Объем памяти y: %zu байт\n", sizeof(y));
