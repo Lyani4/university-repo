@@ -5,22 +5,21 @@
 клавиатуры. Вычислить сумму чисел. Вывести исходные числа и результат
  */
 
-int main(void) {
-  const int SIZE = 7;
-  int *p = 0;
-  long product = 1;
-  int i;
-  p = new int[SIZE];
-  std::cout << "Введи значение\n";
-  for (i = 0; i < SIZE; i++)
-    std::cin >> *(p + i);
-  for (i = 0; i < SIZE; i++)
-    if (*(p + i) != 0)
-      product *= *(p + i);
-  std::cout << "Ваши числа\n";
-  for (i = 0; i < SIZE; i++)
-    std::cout << *(p + i) << std::endl;
-  std::cout << "ПрОиЗвЕдЕнИе Равно\n" << product << std::endl;
-  delete[] p;
+int main() {
+  float sum = 0;
+  float *dyn_arr = new float[7];
+  for (int i = 0; i < 7; i++) {
+    std::cout << "Введите вещественное число:\n";
+    std::cin >> dyn_arr[i];
+  }
+  std::cout << "\nИсходные числа: ";
+  for (int i = 0; i < 7; i++) {
+    std::cout << dyn_arr[i];
+    std::cout << " ";
+    sum += dyn_arr[i];
+  }
+  std::cout << "\nСумма вещественных чисел: ";
+  std::cout << sum << std::endl;
+  delete[] dyn_arr;
   return 0;
 }
