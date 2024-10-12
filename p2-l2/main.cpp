@@ -21,6 +21,8 @@ void solution1(std::string str) {
     // https://ru.wikipedia.org/wiki/ASCII
     bool is_latin_letter = isascii(symbol) && (symbol >= 65 && symbol <= 90 ||
                                                symbol >= 97 && symbol <= 122);
+
+    // Внутри функции isascii() идёт магическое преобразование строки в число
     if (is_latin_letter) {
       std::cout << symbol << " ";
       counter++;
