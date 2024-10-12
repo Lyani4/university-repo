@@ -13,13 +13,15 @@
  */
 void solution1(std::string str) {
   int counter = 0;
+  char symbol;
+  bool is_latin_letter;
 
   std::cout << "Список латинских букв в строке: ";
   for (int i = 0; i < str.length(); i++) {
-    char symbol = str[i];
+    symbol = str[i];
     // Проверка на латинскую букву (ASCII коды 65-90 и 97-122)
     // https://ru.wikipedia.org/wiki/ASCII
-    bool is_latin_letter = isascii(symbol) && (symbol >= 65 && symbol <= 90 ||
+   is_latin_letter = isascii(symbol) && (symbol >= 65 && symbol <= 90 ||
                                                symbol >= 97 && symbol <= 122);
 
     // Внутри функции isascii() идёт магическое преобразование строки в число
@@ -40,12 +42,14 @@ void solution2(std::string str) {
   int counter = 0;
   // a-zA-Z - все латинские буквы
   std::regex latina_pattern("[a-zA-Z]");
+  std::string symbol;
+  bool is_latin_letter;
 
   for (int i = 0; i < str.length(); i++) {
     // Для работы regex_match нужно передавать тип std::string
     // substr - возвращает подстроку из строки str с типом std::string
-    std::string symbol = str.substr(i, 1);
-    bool is_latin_letter = std::regex_match(symbol, latina_pattern);
+    symbol = str.substr(i, 1);
+    is_latin_letter = std::regex_match(symbol, latina_pattern);
     if (is_latin_letter) {
       std::cout << str[i] << " ";
       counter++;
