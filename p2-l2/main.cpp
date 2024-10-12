@@ -53,7 +53,7 @@ void solution2(std::string str) {
   }
 
   std::cout << std::endl;
-  std::cout << "Список латинских букв в строке: " << counter << std::endl;
+  std::cout << "Количество латинских букв в строке: " << counter << std::endl;
 }
 
 int main() {
