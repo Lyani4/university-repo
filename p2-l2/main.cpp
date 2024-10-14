@@ -39,7 +39,6 @@ void solution1(std::string str) {
  * Решение для нормальных людей, с использованием regex
  */
 void solution2(std::string str) {
-  int counter = 0;
   // a-zA-Z - все латинские буквы
   std::regex latina_pattern("[^a-zA-Z]");
   str = std::regex_replace(str, latina_pattern, "");
