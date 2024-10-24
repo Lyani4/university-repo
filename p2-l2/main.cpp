@@ -1,7 +1,7 @@
 #include <cctype>
 #include <iostream>
-#include <regex>
 #include <string>
+#include <typeinfo>
 
 /**
  * В заданной строке подсчитать количество латинских букв
@@ -38,25 +38,12 @@ void solution1(std::string str) {
  * Решение для нормальных людей, с использованием regex
  */
 void solution2(std::string str) {
-  int counter = 0;
   // a-zA-Z - все латинские буквы
-  std::regex latina_pattern("[a-zA-Z]");
-  std::string symbol;
-  bool is_latin_letter;
-
-  for (int i = 0; i < str.length(); i++) {
-    // Для работы regex_match нужно передавать тип std::string
-    // substr - возвращает подстроку из строки str с типом std::string
-    symbol = str.substr(i, 1);
-    is_latin_letter = std::regex_match(symbol, latina_pattern);
-    if (is_latin_letter) {
-      std::cout << str[i] << " ";
-      counter++;
-    }
-  }
-
-  std::cout << std::endl;
-  std::cout << "Количество латинских букв в строке: " << counter << std::endl;
+  std::regex latina_pattern("[^a-zA-Z]");
+  str = std::regex_replace(str, latina_pattern, "");
+  std::cout << "Список латинских букв в строке: " << str << std::endl;
+  std::cout << "Количество латинских букв в строке: " << str.length()
+            << std::endl;
 }
 
 int main() {
