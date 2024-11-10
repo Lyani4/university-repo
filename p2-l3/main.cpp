@@ -6,7 +6,7 @@
 
 void fill_array(int mas[], int size) {
   for (int i = 0; i < size; i++) {
-    std::cout << "Введите значение элемента:";
+    std::cout << "Введите элемент массива(int):";
     std::cin >> mas[i];
   }
 }
